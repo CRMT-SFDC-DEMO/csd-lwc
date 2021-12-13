@@ -6,7 +6,6 @@
     </types>
     <types>
         <members>creaCartellino</members>
-        <members>creaSpesa</members>
         <members>creaTrasferte</members>
         <members>genericCreaRecord</members>
         <members>genericDataTable</members>
