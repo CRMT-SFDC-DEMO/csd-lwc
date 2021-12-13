@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+    </targets>
+    <targetConfigs>  
+        <targetConfig targets="lightning__HomePage,lightning__RecordPage,lightning__AppPage">
+            <property name="icon" type="String" label="Inserisci Icona" />
+            <property name="title" type="String" label="Inserisci Titolo Tabella" />
+            <property name="columns" type="String" label="Inserisci JSON con le colonne da mostrare" />
+            <property name="sObject" type="String"  label="Inserisci Oggetto" />
+            <property name="fields" type="String"  label="Lista di Campi separati da una virgola" />
+            <property name="recordType" type="String"  label="Inserisci RecordType" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

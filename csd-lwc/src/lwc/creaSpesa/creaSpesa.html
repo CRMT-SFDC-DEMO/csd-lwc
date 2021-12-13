@@ -1,0 +1,25 @@
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <lightning-icon icon-name="standard:record_create" size="small"></lightning-icon>
+            &nbsp; Inserisci Nota Spese
+        </h3>
+            <lightning-record-edit-form
+            object-api-name={objectApiName}
+            onsuccess={handleSuccess}>
+            <div class="slds-grid">
+                <div class="slds-col slds-var-p-horizontal_medium">
+                    <lightning-input-field field-name="Dipendente__c"></lightning-input-field>
+                    <lightning-input-field field-name="DescrizioneSpesa__c"></lightning-input-field>
+                </div>
+                <div class="slds-col slds-var-p-horizontal_medium">
+                    <lightning-input-field field-name="Costo__c"></lightning-input-field>
+                    <lightning-input-field field-name="SpesaAutorizzata__c"></lightning-input-field>
+                </div>
+            </div>
+        </lightning-record-edit-form>
+        <div slot="footer" class="slds-clearfix">
+            <lightning-button type="submit" variant="brand" label="Crea Record" onclick={saveAndNewClick} class="slds-align_absolute-center"></lightning-button>
+        </div>
+    </lightning-card>   
+</template>

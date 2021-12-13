@@ -1,0 +1,28 @@
+<template>
+  <lightning-card>
+    <h3 slot="title">
+      <lightning-icon icon-name="standard:record_create" size="small"></lightning-icon>
+      &nbsp; Inserisci Trasferta
+    </h3>
+    <lightning-record-edit-form object-api-name={objectApiName} record-type-id={recordTypeId} onsuccess={handleSuccess}>
+      <div class="slds-grid">
+        <div class="slds-col slds-var-p-horizontal_medium">
+          <lightning-input-field field-name="Mezzo_di_trasporto__c" required></lightning-input-field>
+          <lightning-input-field field-name="Regione_di_Partenza__c" required></lightning-input-field>
+          <lightning-input-field field-name="Regione_di_Destinazione__c" required></lightning-input-field>
+          <lightning-input-field field-name="Inizio_Trasferta__c" required></lightning-input-field>
+        </div>
+        <div class="slds-col slds-var-p-horizontal_medium">
+          <lightning-input-field field-name="Dipendente__c" required></lightning-input-field>
+          <lightning-input-field field-name="Comune_di_Partenza__c" required></lightning-input-field>
+          <lightning-input-field field-name="Comune_di_Destinazione__c" required></lightning-input-field>
+          <lightning-input-field field-name="Fine_Trasferta__c" required></lightning-input-field>
+        </div>
+      </div>
+      <lightning-input-field field-name="Note__c"></lightning-input-field>
+    </lightning-record-edit-form>
+    <div slot="footer" class="slds-clearfix">
+      <lightning-button type="submit" variant="brand" label="Crea Record" onclick={saveAndNewClick} class="slds-align_absolute-center"></lightning-button>
+    </div>
+  </lightning-card>
+</template>

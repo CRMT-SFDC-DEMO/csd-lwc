@@ -1,0 +1,26 @@
+<template>
+        <lightning-card>
+            <h3 slot="title">
+                <lightning-icon icon-name={icon} size="small"></lightning-icon>
+                &nbsp; {title}
+            </h3>
+            <lightning-record-edit-form
+            object-api-name={objectApiName}
+            onsuccess={handleSuccess}>
+            <div class="slds-grid">
+                <div class="slds-var-p-horizontal_medium">
+                    <lightning-input-field field-name="Giustificativo__c"></lightning-input-field>
+                    <lightning-input-field field-name="PeriodoInizio__c"></lightning-input-field>
+                </div>
+                <div class="slds-var-p-horizontal_medium">
+                    <lightning-input-field field-name="Dipendente__c"></lightning-input-field>
+                    <lightning-input-field field-name="PeriodoFine__c"></lightning-input-field>
+                </div>
+            </div>
+            <lightning-input-field field-name="Note__c"></lightning-input-field>
+        </lightning-record-edit-form>
+        <div slot="footer" class="slds-clearfix">
+            <lightning-button type="submit" variant={buttonVariant} label={buttonText} onclick={saveAndNewClick} class="slds-align_absolute-center"></lightning-button>
+        </div>
+    </lightning-card>
+</template>

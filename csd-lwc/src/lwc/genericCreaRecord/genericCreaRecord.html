@@ -1,0 +1,23 @@
+<template>
+	<lightning-card>
+        <h3 slot="title">
+          <lightning-icon icon-name={icon} size="small"></lightning-icon>
+          &nbsp; {title}
+        </h3>
+		<lightning-record-edit-form object-api-name={sObject} record-type-id={recordTypeId} onsuccess={handleSuccess}>
+			<template for:each={fieldListArr} for:item='field'>
+				<lightning-input-field field-name={field.fieldName} key={field.label} required={field.required}> 
+				</lightning-input-field>
+			</template>
+			<br/>
+			<br/>
+			<lightning-button class="slds-align_absolute-center"
+								variant="brand"
+								type="submit"
+								name="update"
+								label="Crea"
+            					onclick={saveAndNewClick}>
+			</lightning-button>
+		</lightning-record-edit-form>
+    </lightning-card>
+</template>

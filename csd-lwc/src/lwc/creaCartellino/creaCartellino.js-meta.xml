@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__AppPage,lightning__HomePage">
+            <property name="title" type="String" default="Inserisci Cartellino" label="Inserisci Titolo" />
+            <property name="icon" type="String" default="standard:record_create" label="Cambia Icona" />
+            <property name="buttonText" type="String" default="Crea Record" label="Cambia Icona" />
+            <property name="buttonVariant" type="String" default="brand" datasource="Neutral,brand,brand-outline,Success" label="Cambia Stile Bottone" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
