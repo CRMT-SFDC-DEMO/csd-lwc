@@ -5,7 +5,6 @@
         <name>FlexiPage</name>
     </types>
     <types>
-        <members>creaCartellino</members>
         <members>creaTrasferte</members>
         <members>genericCreaRecord</members>
         <members>genericDataTable</members>
