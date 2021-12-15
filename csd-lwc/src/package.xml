@@ -5,6 +5,10 @@
         <name>CustomApplication</name>
     </types>
 	<types>
+        <members>standard-home</members>
+        <name>CustomTab</name>
+    </types>
+	<types>
         <members>lwc_home</members>
         <name>FlexiPage</name>
     </types>
@@ -17,6 +21,6 @@
     <types>
         <members>UpdateDataTable</members>
         <name>LightningMessageChannel</name>
-    </types>
+    </types>	
     <version>53.0</version>
 </Package>
